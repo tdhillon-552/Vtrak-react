@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from api.models import Vehicletable, Typetable, Statustable
+
+admin.site.register(Vehicletable)
+admin.site.register(Typetable)
+admin.site.register(Statustable)

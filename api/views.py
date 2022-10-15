@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from rest_framework.generics import ListAPIView
+from .serializers import VehSerializer
+from .models import Vehicletable
 
-# Create your views here.
+
+class GetVehs(ListAPIView):
+    serializer_class = VehSerializer
+    queryset = Vehicletable.objects.all()
